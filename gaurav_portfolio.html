@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurav Sawant | Data Professional Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent-de: #38bdf8; /* Blue for Engineering */
+            --accent-ds: #c084fc; /* Purple for Science */
+            --accent-da: #fbbf24; /* Amber for Analytics */
+            --highlight: #22c55e;
+        }
+
+        body { 
+            font-family: 'Inter', -apple-system, sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            margin: 0; 
+            line-height: 1.6; 
+            scroll-behavior: smooth;
+        }
+
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+        /* --- Hero Section --- */
+        header { 
+            text-align: center; 
+            padding: 100px 0 60px 0; 
+            border-bottom: 1px solid #334155;
+            background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+        }
+        h1 { font-size: 3.5rem; margin: 0; letter-spacing: -1px; }
+        .headline { font-size: 1.5rem; color: var(--accent-de); font-weight: 600; margin: 15px 0; }
+        .summary { max-width: 850px; margin: 20px auto; color: var(--text-dim); font-size: 1.15rem; }
+        
+        .cta-box { margin-top: 30px; }
+        .btn { 
+            padding: 12px 28px; 
+            background: var(--accent-de); 
+            color: #0f172a; 
+            text-decoration: none; 
+            border-radius: 8px; 
+            font-weight: bold; 
+            display: inline-block; 
+            transition: 0.3s;
+            margin: 5px;
+        }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 1px solid var(--accent-de); color: white; }
+
+        /* --- Pillars & Skills Grid --- */
+        .section-title { text-align: center; margin-top: 80px; margin-bottom: 40px; font-size: 2rem; }
+        .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        
+        .pillar-card { 
+            background: var(--card); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border-top: 4px solid var(--accent-de); 
+            transition: 0.3s;
+        }
+        .pillar-card:hover { transform: translateY(-5px); }
+        .pillar-card h3 { margin-top: 0; display: flex; align-items: center; gap: 10px; }
+        .pillar-card ul { list-style: none; padding: 0; margin: 15px 0 0 0; color: var(--text-dim); }
+        .pillar-card li { margin-bottom: 8px; font-size: 0.95rem; }
+        
+        .ds-border { border-top-color: var(--accent-ds); }
+        .da-border { border-top-color: var(--accent-da); }
+
+        /* --- Project Cards --- */
+        .project-grid { display: flex; flex-direction: column; gap: 30px; margin-top: 40px; }
+        .project-card { 
+            background: var(--card); 
+            border-radius: 12px; 
+            border: 1px solid #334155; 
+            overflow: hidden;
+            transition: 0.3s;
+        }
+        .project-content { padding: 30px; }
+        .project-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; }
+        .project-card h3 { margin: 0; font-size: 1.4rem; }
+        
+        .tag { 
+            font-size: 0.75rem; 
+            padding: 4px 12px; 
+            border-radius: 20px; 
+            background: #334155; 
+            color: var(--text);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .impact-list { margin: 15px 0; }
+        .impact-item { margin-bottom: 10px; }
+        .impact-item strong { color: var(--text); }
+
+        /* --- Footer --- */
+        .cashback-footer { 
+            background: #064e3b; 
+            color: #4ade80; 
+            padding: 20px; 
+            border-radius: 12px; 
+            text-align: center; 
+            margin: 80px 0 40px 0; 
+            font-size: 1rem; 
+            border: 1px dashed #4ade80;
+        }
+        footer { text-align: center; padding: 40px; color: var(--text-dim); font-size: 0.9rem; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .pillar-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Gaurav Sawant</h1>
+        <div class="headline">Data Engineer & Data Scientist | MLOps & BI Specialist</div>
+        
+        <p class="summary">
+            Analytical Data Professional specializing in building end-to-end, scalable ELT pipelines and production-ready predictive models. 
+            With an <strong>M.Sc. in Computer Science (2025)</strong>, I bridge the gap between complex data infrastructure and actionable business intelligence. 
+            I am proficient in data orchestration via <strong>Apache Airflow</strong>, modeling using <strong>dbt</strong>, and deploying high-performance <strong>XGBoost</strong> models through <strong>FastAPI</strong>.
+        </p>
+
+        <div class="cta-box">
+            <a href="https://linkedin.com/in/gaurav-data-science-analytics" target="_blank" class="btn">Connect on LinkedIn</a>
+            <a href="#projects" class="btn btn-outline">Explore Projects</a>
+        </div>
+    </header>
+
+    <h2 class="section-title">Technical Expertise & Core Pillars</h2>
+    
+    <div class="pillars">
+        <div class="pillar-card">
+            <h3 style="color: var(--accent-de);"><i class="fas fa-server"></i> Data Engineering</h3>
+            <p>Delivered containerized ELT solutions and Dimensional Data Warehouses using <strong>Docker</strong> and <strong>Star Schema</strong> modeling.</p>
+            <ul>
+                <li><strong>Orchestration:</strong> Apache Airflow</li>
+                <li><strong>Transformation:</strong> dbt (Data as Code)</li>
+                <li><strong>Warehouse:</strong> PostgreSQL, MySQL</li>
+                <li><strong>Infrastructure:</strong> Docker Compose, Git</li>
+            </ul>
+        </div>
+
+        <div class="pillar-card ds-border">
+            <h3 style="color: var(--accent-ds);"><i class="fas fa-brain"></i> Data Science</h3>
+            <p>Developed a Credit Risk Engine with <strong>0.87 AUC-ROC</strong>, ensuring zero training-serving skew via <strong>Pydantic Data Contracts</strong>.</p>
+            <ul>
+                <li><strong>Modeling:</strong> XGBoost, Scikit-learn</li>
+                <li><strong>Production:</strong> FastAPI, REST APIs</li>
+                <li><strong>AI/NLP:</strong> LangChain, LLM Integration</li>
+                <li><strong>MLOps:</strong> Production-Ready Deployment</li>
+            </ul>
+        </div>
+
+        <div class="pillar-card da-border">
+            <h3 style="color: var(--accent-da);"><i class="fas fa-chart-line"></i> Data Analytics</h3>
+            <p>Engineered dynamic Power BI dashboards for <strong>9K+ records</strong> using advanced SQL and complex <strong>DAX logic</strong>.</p>
+            <ul>
+                <li><strong>Visualization:</strong> Power BI, Tableau</li>
+                <li><strong>Logic:</strong> Advanced SQL, DAX</li>
+                <li><strong>ETL:</strong> Data Cleansing & Quality</li>
+                <li><strong>Reporting:</strong> KPI Tracking, Metabase</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2 id="projects" class="section-title">Project Portfolio</h2>
+
+    <div class="project-grid">
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <h3 style="color: var(--accent-ds);">Predictive Credit Risk Engine (DS/MLOps)</h3>
+                    <span class="tag" style="background: var(--accent-ds); color: #000;">BFSI | Regulatory Risk</span>
+                </div>
+                <div class="impact-list">
+                    <p class="impact-item"><strong>The Problem:</strong> Real-time estimation of Probability of Default (P(D)) for core regulatory Pillar inputs.</p>
+                    <p class="impact-item"><strong>The Solution:</strong> Developed an XGBoost model using SMOTE for class imbalance and enforced Pydantic Data Contracts.</p>
+                    <p class="impact-item"><strong>The Impact:</strong> Achieved <strong>0.87 AUC-ROC</strong> and deployed as a low-latency REST API via FastAPI.</p>
+                </div>
+                <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <span class="tag">XGBoost</span> <span class="tag">FastAPI</span> <span class="tag">MLOps</span>
+                    </div>
+                    <a href="https://github.com/your-username/credit-risk-engine" target="_blank" class="btn" style="background: var(--accent-ds); margin:0; padding: 8px 15px; font-size: 0.9rem;">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <h3 style="color: var(--accent-de);">E-commerce ELT Data Warehouse (DE)</h3>
+                    <span class="tag" style="background: var(--accent-de); color: #000;">Retail | Infrastructure</span>
+                </div>
+                <div class="impact-list">
+                    <p class="impact-item"><strong>The Problem:</strong> Establishing a scalable, containerized infrastructure for raw retail data transformation.</p>
+                    <p class="impact-item"><strong>The Solution:</strong> Orchestrated a full workflow using Apache Airflow DAGs and modeled data via dbt (Data as Code).</p>
+                    <p class="impact-item"><strong>The Impact:</strong> Built a structured <strong>Star Schema</strong> (fact_sales, dim_customers) ensuring 100% data quality.</p>
+                </div>
+                <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <span class="tag">Airflow</span> <span class="tag">dbt</span> <span class="tag">Docker</span>
+                    </div>
+                    <a href="https://github.com/your-username/ecommerce-elt-dwh" target="_blank" class="btn" style="background: var(--accent-de); margin:0; padding: 8px 15px; font-size: 0.9rem;">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-content">
+                <div class="project-header">
+                    <h3 style="color: var(--accent-da);">Sales Performance BI Dashboard (DA)</h3>
+                    <span class="tag" style="background: var(--accent-da); color: #000;">Business Intelligence</span>
+                </div>
+                <div class="impact-list">
+                    <p class="impact-item"><strong>The Problem:</strong> Translating 9K+ records of raw sales data into actionable executive KPIs.</p>
+                    <p class="impact-item"><strong>The Solution:</strong> Led complete ETL using Advanced SQL for cleansing and implemented complex DAX logic.</p>
+                    <p class="impact-item"><strong>The Impact:</strong> Created dynamic dashboards for customer segmentation and time-intelligence reporting.</p>
+                </div>
+                <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                        <span class="tag">Power BI</span> <span class="tag">SQL</span> <span class="tag">DAX</span>
+                    </div>
+                    <a href="https://github.com/your-username/sales-dashboard-da" target="_blank" class="btn" style="background: var(--accent-da); margin:0; padding: 8px 15px; font-size: 0.9rem;">
+                        <i class="fab fa-github"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cashback-footer">
+        <i class="fas fa-coins"></i> <strong>Efficiency Optimization:</strong> I treat data architecture like a high-yield cashback strategy—maximizing every byte of performance for the best possible return on logic.
+    </div>
+
+    <footer>
+        &copy; 2026 Gaurav Sawant | <a href="mailto:gauravrsawant777@gmail.com" style="color: var(--text-dim);">Contact Me</a>
+    </footer>
+</div>
+
+</body>
+</html>
