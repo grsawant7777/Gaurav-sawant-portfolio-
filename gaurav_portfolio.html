@@ -165,7 +165,6 @@
 
         <div class="pillar-card da-border">
             <h3 style="color: var(--accent-da);"><i class="fas fa-chart-line"></i> Data Analytics</h3>
-            <p>Engineered dynamic Power BI dashboards for <strong>9K+ records</strong> using advanced SQL and complex <strong>DAX logic</strong>.</p>
             <ul>
                 <li><strong>Visualization:</strong> Power BI, Tableau</li>
                 <li><strong>Logic:</strong> Advanced SQL, DAX</li>
@@ -201,49 +200,96 @@
         </div>
 
         <div class="project-card">
-            <div class="project-content">
-                <div class="project-header">
-                    <h3 style="color: var(--accent-de);">E-commerce ELT Data Warehouse (DE)</h3>
-                    <span class="tag" style="background: var(--accent-de); color: #000;">Retail | Infrastructure</span>
-                </div>
-                <div class="impact-list">
-                    <p class="impact-item"><strong>The Problem:</strong> Establishing a scalable, containerized infrastructure for raw retail data transformation.</p>
-                    <p class="impact-item"><strong>The Solution:</strong> Orchestrated a full workflow using Apache Airflow DAGs and modeled data via dbt (Data as Code).</p>
-                    <p class="impact-item"><strong>The Impact:</strong> Built a structured <strong>Star Schema</strong> (fact_sales, dim_customers) ensuring 100% data quality.</p>
-                </div>
-                <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
-                        <span class="tag">Airflow</span> <span class="tag">dbt</span> <span class="tag">Docker</span>
-                    </div>
-                    <a href="https://github.com/your-username/ecommerce-elt-dwh" target="_blank" class="btn" style="background: var(--accent-de); margin:0; padding: 8px 15px; font-size: 0.9rem;">
-                        <i class="fab fa-github"></i> View Repository
-                    </a>
-                </div>
-            </div>
+    <div class="project-content">
+        <div class="project-header">
+            <h3 style="color: var(--accent-de);">E-Commerce ELT Data Warehouse (Orchestration & DWH)</h3>
+            <span class="tag" style="background: var(--accent-de); color: #000;">Data Engineering | MLOps Prep</span>
         </div>
-
-        <div class="project-card">
-            <div class="project-content">
-                <div class="project-header">
-                    <h3 style="color: var(--accent-da);">Sales Performance BI Dashboard (DA)</h3>
-                    <span class="tag" style="background: var(--accent-da); color: #000;">Business Intelligence</span>
-                </div>
-                <div class="impact-list">
-                    <p class="impact-item"><strong>The Problem:</strong> Translating 9K+ records of raw sales data into actionable executive KPIs.</p>
-                    <p class="impact-item"><strong>The Solution:</strong> Led complete ETL using Advanced SQL for cleansing and implemented complex DAX logic.</p>
-                    <p class="impact-item"><strong>The Impact:</strong> Created dynamic dashboards for customer segmentation and time-intelligence reporting.</p>
-                </div>
-                <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-                    <div style="display:flex; gap:8px; flex-wrap:wrap;">
-                        <span class="tag">Power BI</span> <span class="tag">SQL</span> <span class="tag">DAX</span>
-                    </div>
-                    <a href="https://github.com/your-username/sales-dashboard-da" target="_blank" class="btn" style="background: var(--accent-da); margin:0; padding: 8px 15px; font-size: 0.9rem;">
-                        <i class="fab fa-github"></i> View Repository
-                    </a>
-                </div>
+        <div class="impact-list">
+            <p class="impact-item"><strong>The Challenge:</strong> Building a production-ready infrastructure to transform raw, fragmented retail data into high-performance business marts while ensuring 100% data recovery and quality.</p>
+            
+            <p class="impact-item"><strong>The Action (7-Stage Medallion Architecture):</strong>
+                <ul style="margin-left: 20px; color: var(--text-dim); font-size: 0.95rem;">
+                    <li><strong>Orchestration:</strong> Engineered an idempotent 7-stage DAG in <strong>Apache Airflow</strong> to automate ingestion, validation, and transformation.</li>
+                    <li><strong>Data as Code (dbt):</strong> Developed a centralized transformation layer using <strong>dbt</strong>, implementing <strong>Incremental Materialization</strong> to reduce compute load by 90%.</li>
+                    <li><strong>Schema Design:</strong> Structured a robust <strong>Star Schema</strong> in PostgreSQL, utilizing MD5 surrogate keys and integer-based date keys for sub-second query performance.</li>
+                    <li><strong>Governance:</strong> Integrated automated quality gates and <strong>dbt-native tests</strong> to enforce referential integrity across the pipeline.</li>
+                </ul>
+            </p>
+            
+            <p class="impact-item"><strong>The Impact:</strong> Delivered a fully containerized (Docker) end-to-end pipeline that provides real-time visibility into Customer Lifetime Value (CLV) and sales trends, ready for immediate BI consumption or downstream ML training.</p>
+        </div>
+        <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag">Airflow</span> <span class="tag">dbt</span> <span class="tag">Docker</span> <span class="tag">PostgreSQL</span>
             </div>
+            <a href="https://github.com/grsawant7777/E-Commerce-ELT-Pipeline" target="_blank" class="btn" style="background: var(--accent-de); margin:0; padding: 8px 15px; font-size: 0.9rem;">
+                <i class="fab fa-github"></i> View Architecture
+            </a>
         </div>
     </div>
+</div>
+
+        <div class="project-card">
+    <div class="project-content">
+        <div class="project-header">
+            <h3 style="color: var(--accent-ds);">Predictive Customer Churn Intelligence (Python & Tableau)</h3>
+            <span class="tag" style="background: var(--accent-ds); color: #000;">ML | Predictive Analytics</span>
+        </div>
+        <div class="impact-list">
+            <p class="impact-item"><strong>The Problem:</strong> Identifying high-risk customers in a Telco dataset to prevent revenue loss through proactive retention strategies.</p>
+            
+            <p class="impact-item"><strong>The Action:</strong>
+                <ul style="margin-left: 20px; color: var(--text-dim); font-size: 0.95rem;">
+                    <li><strong>Feature Engineering:</strong> Developed a Python pipeline (Jupyter) to preprocess raw customer data, handling categorical encoding and feature scaling for 7,000+ records.</li>
+                    <li><strong>Predictive Modeling:</strong> Trained and tuned a classification model to predict the probability of churn, exporting high-confidence predictions for business use.</li>
+                    <li><strong>Executive Visualization:</strong> Designed a <strong>Tableau Dashboard</strong> to translate model outputs into actionable insights, highlighting churn drivers like contract type and monthly charges.</li>
+                </ul>
+            </p>
+            
+            <p class="impact-item"><strong>The Impact:</strong> Created a bridge between raw ML predictions and business strategy. The solution enables marketing teams to target the top 10% of "at-risk" customers, potentially reducing churn-related revenue loss by identifying key pain points in real-time.</p>
+        </div>
+        <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag">Python</span> <span class="tag">Scikit-learn</span> <span class="tag">Tableau</span> <span class="tag">Exploratory Data Analysis</span>
+            </div>
+            <a href="https://github.com/grsawant7777/Gaurav-sawant-portfolio/tree/main/Customer%20Churning" target="_blank" class="btn" style="background: var(--accent-ds); margin:0; padding: 8px 15px; font-size: 0.9rem;">
+                <i class="fab fa-github"></i> View Notebook & Dashboard
+            </a>
+        </div>
+    </div>
+</div>
+
+       <div class="project-card">
+    <div class="project-content">
+        <div class="project-header">
+            <h3 style="color: var(--accent-da);">Sales Performance & Operational Intelligence (Excel/Advanced Analytics)</h3>
+            <span class="tag" style="background: var(--accent-da); color: #000;">Data Analytics | BI</span>
+        </div>
+        <div class="impact-list">
+            <p class="impact-item"><strong>The Problem:</strong> Managing a high-volume retail dataset (~9,400 records) across multiple categories (Furniture, Office Supplies, Tech) where identifying regional underperformance and product-level trends was manually intensive.</p>
+            
+            <p class="impact-item"><strong>The Action:</strong>
+                <ul style="margin-left: 20px; color: var(--text-dim); font-size: 0.95rem;">
+                    <li><strong>Data Engineering:</strong> Cleaned and structured raw transactional data, managing complex fields like Ship Mode, State-level geographics, and Segment-based customer IDs.</li>
+                    <li><strong>Advanced Aggregation:</strong> Engineered logic to calculate <strong>Year-over-Year (YoY)</strong> and <strong>Monthly Sales Trends</strong>, peaking at $81K+ in high-performing months.</li>
+                    <li><strong>Multivariate Analysis:</strong> Developed a multi-dimensional analysis layer to track the "Top 10 Products" by revenue and sub-category performance (e.g., Binders vs. Copiers).</li>
+                    <li><strong>KPI Architecture:</strong> Built a centralized dashboard tracking <strong>Average Order Value (AOV)</strong>, <strong>Unique Customer Count (790+)</strong>, and <strong>Total Sales ($479K+)</strong>.</li>
+                </ul>
+            </p>
+            
+            <p class="impact-item"><strong>The Impact:</strong> Transformed raw tabular data into a strategic asset. The solution provides instant visibility into state-level performance (e.g., California vs. New York) and identifies high-margin categories, reducing the time required for monthly performance reviews from hours to seconds.</p>
+        </div>
+        <div style="display:flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+            <div style="display:flex; gap:8px; flex-wrap:wrap;">
+                <span class="tag">Pivot Tables</span> <span class="tag">Advanced Formulas</span> <span class="tag">Trend Analysis</span> <span class="tag">Data Quality</span>
+            </div>
+            <a href="https://github.com/grsawant7777/Gaurav-sawant-portfolio/tree/main/Excel%20Project" target="_blank" class="btn" style="background: var(--accent-da); margin:0; padding: 8px 15px; font-size: 0.9rem;">
+                <i class="fab fa-github"></i> View Analysis
+            </a>
+        </div>
+    </div>
+</div>
 
     <div class="cashback-footer">
         <i class="fas fa-coins"></i> <strong>Efficiency Optimization:</strong> I treat data architecture like a high-yield cashback strategy—maximizing every byte of performance for the best possible return on logic.
